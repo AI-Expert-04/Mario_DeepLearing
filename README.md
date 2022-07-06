@@ -4,7 +4,6 @@
 # ![tabel](game_.png) 
 # ![tabel](label_.png) 
 # ![tabel](label2.png)
-# ![tabel](labe2.png)
 # ![tabel](label3.png)
 # ![tabel](label4.png) 
 # ![tabel](label5.png)
