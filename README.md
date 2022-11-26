@@ -28,8 +28,8 @@
         # -1 ~ 1 사이의 값을 가진 6개의 output 중 0.5보다 크면 1로 바꾸고 아니면 0으로 출력
         result = (output > 0.5).astype(np.int)
         return result
-        ## 자세한 코드는 ##### Genentic_Algorithm.py
     </code></pre>
+    ##### 자세한 코드는 Genentic_Algorithm.py
 # 마리오 게임
 ![tabel](image/game_.png)
 # Pyqt5로 그린 인공신경망 
