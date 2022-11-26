@@ -29,7 +29,7 @@
         result = (output > 0.5).astype(np.int)
         return result
     </code></pre>
-    ##### 자세한 코드는 Genentic_Algorithm.py
+##### 자세한 코드는 Genentic_Algorithm.py
 # 마리오 게임
 ![tabel](image/game_.png)
 # Pyqt5로 그린 인공신경망 
