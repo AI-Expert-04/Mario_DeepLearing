@@ -6,9 +6,10 @@
 # 마리오 게임
 ![tabel](image/game_.png)
 # Pyqt5로 그린 인공신경망 
-![tabel](image/label5.png)
-![tabel](image/label_.png) 
-![tabel](image/label4.png) 
+![tabel](image/label_.png)
+# 인공신경망 예시
+![tabel](image/label5.png) 
+# 활성화 함수 ReLU, Sigmoid
 ![tabel](image/label3.png)
 # Pyqt5로 그린 게임 타일 정보
 ![tabel](image/label2.png)
