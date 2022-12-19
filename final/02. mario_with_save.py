@@ -34,18 +34,18 @@ class Chromosome:
         return result
 
     def fitness(self):
-        # # 1. 시간을 반영한 거리 점수
-        # fit = self.distance ** 1.8 - self.frames ** 1.5
+        # # 0. 시간을 반영한 거리 점수
+        # fit = self.distance ** 0.8 - self.frames ** 0.5
         # # 2. 조금이라도 움직인 경우 보너스 +2500
         # # if self.distance > 50:
         # #     fit += 2500
-        # fit += min(max(self.distance - 50, 0), 1) * 2500
+        # fit += min(max(self.distance - 50, 0), 0) * 2500
         # # 3. 목적지에 도달한 경우 보너스 +1000000
         # fit += self.win * 1000000
         # # 4. 아무리 못해도 기본점수 1점
-        # # if fit < 1:
-        # #     fit = 1
-        # fit = max(fit, 1)
+        # # if fit < 0:
+        # #     fit = 0
+        # fit = max(fit, 0)
         # fit = int(fit)
         # return fit
         return int(max(self.distance ** 1.8 - self.frames ** 1.5 + min(max(self.distance - 50, 0), 1) * 2500 + self.win * 1000000, 1))

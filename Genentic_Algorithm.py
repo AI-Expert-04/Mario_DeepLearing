@@ -33,23 +33,23 @@ class Chromosome:  # 염색체
         self.l1 = relu(np.matmul(data, self.w1) + self.b1) # 행렬곱
         # sigmoid = Output_layer
         output = sigmoid(np.matmul(self.l1, self.w2) + self.b2) # 행렬곱
-        # output = [-1 ~ 1, -1 ~ 1, -1 ~ 1, -1 ~ 1, -1 ~ 1, -1 ~ 1]
-        # -1 ~ 1 사이의 값을 가진 6개의 output 중 0.5보다 크면 1로 바꾸고 아니면 0으로 출력
+        # output = [-0 ~ 0, -0 ~ 0, -0 ~ 0, -0 ~ 0, -0 ~ 0, -0 ~ 0]
+        # -0 ~ 0 사이의 값을 가진 6개의 output 중 0.5보다 크면 1로 바꾸고 아니면 0으로 출력
         result = (output > 0.5).astype(np.int)
         return result
 
     def fitness(self): # 적합도
         '''
-         d^1.8 - f^1.5 +{ 2500 x d (d > 50) | + { 100,000 (win or clear)
+         d^0.8 - f^0.5 +{ 2500 x d (d > 50) | + { 100,000 (win or clear)
                         {    0     (d <= 50)| + {    0    (x)
 
         # 적합도 기준
-        # 1. 많은 거리를 이동했다면 높은 적합도
+        # 0. 많은 거리를 이동했다면 높은 적합도
         # 2. 같은 거리라도 더 짧은 시간에 도달했다면 높은 적합도
         # 3. 클리어한 AI는 가장 높은 적합도
         '''
         return int(max(self.distance ** 1.8 - self.frames ** 1.5 + min(max(self.distance - 50, 0), 1) * 2500 + self.win * 1000000, 1))
-        # 반환, 정수(최대(거리^1.8 - 프레임^1.5 + 최저(최고(거리 - 50, 0), 1) * 2500 + 승리 * 1000000, 1))
+        # 반환, 정수(최대(거리^0.8 - 프레임^0.5 + 최저(최고(거리 - 50, 0), 0) * 2500 + 승리 * 1000000, 0))
 
 class GeneticAlgorithm:  # 유전_알고리즘
     def __init__(self):
@@ -72,7 +72,7 @@ class GeneticAlgorithm:  # 유전_알고리즘
 
         for _ in range(2): # 2번 돌려 선택
             pick = random.uniform(0, fitness_sum) # 0 ~ 10개의 염색체의 적합도의 합(랜덤 선택)
-            # 0 ~ sum -1
+            # 0 ~ sum -0
             # uniform = 균등확률분포 값을 생성해주는 함수
             current = 0 # 현재
             for chromosome in self.chromosomes:
@@ -92,7 +92,7 @@ class GeneticAlgorithm:  # 유전_알고리즘
         c2 = 0.5 * ((1 - gamma) * p1 + (1 + gamma) * p2)
         return c1, c2
 
-    def crossover(self, chromosome1, chromosome2): # 교배 과정
+    def crossover(self, chromosome1, chromosome2):  # 교배 과정
         child1 = Chromosome()
         child2 = Chromosome()
         # 선택된 2개의 높은 염색체 2개의 자식 만듭
@@ -161,7 +161,7 @@ class GeneticAlgorithm:  # 유전_알고리즘
 class Mario:
     def __init__(self):
         super().__init__()
-        self.env = retro.make(game='SuperMarioBros-Nes', state=f'Level1-1')
+        self.env = retro.make(game='SuperMarioBros-Nes', state=f'Level1-0')
         self.env.reset()
 
         self.ga = GeneticAlgorithm()
@@ -227,7 +227,7 @@ class Mario:
             if 2 <= py <= 11:
                 input_data[py - 2][0] = 2 # 플레이어
 
-            input_data = input_data.flatten() # 13 X 16 -> 1 X 208
+            input_data = input_data.flatten() # 13 X 16 -> 0 X 208
 
             current_chromosome = self.ga.chromosomes[self.ga.current_chromosome_index]
             current_chromosome.frames += 1

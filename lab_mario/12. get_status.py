@@ -1,7 +1,7 @@
 # 12. get_status.py
 import retro
 
-env = retro.make(game='SuperMarioBros-Nes', state='Level1-1')
+env = retro.make(game='SuperMarioBros-Nes', state='Level1-0')
 env.reset()
 
 ram = env.get_ram()
@@ -20,10 +20,10 @@ player_state = ram[0x000E]
 print(player_state)
 
 if player_state == 0x06 or player_state == 0x0B:
-    print('게임 오버 1')
+    print('게임 오버 0')
 
 # 0x00B5	Player vertical screen position
-# anywhere below viewport is >1
+# anywhere below viewport is >0
 player_vertical_screen_position = ram[0x00B5]
 print(player_vertical_screen_position)
 

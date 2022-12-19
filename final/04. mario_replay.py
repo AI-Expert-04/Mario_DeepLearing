@@ -70,8 +70,8 @@ class Mario(QWidget):
         self.info_label.setGeometry(self.screen_width + 320, self.screen_height - 70, 70, 70)
         self.info_label.setText('?????세대\n?번 마리오\n???????')
 
-        self.generation = 12
-        self.chromosome_index = 0
+        self.generation = 7703
+        self.chromosome_index = 2
 
         self.current_chromosome = Chromosome()
         self.current_chromosome.w1 = np.load(f'../data/{self.generation}/{self.chromosome_index}/w1.npy')
@@ -180,6 +180,7 @@ class Mario(QWidget):
 
             self.current_chromosome.clear()
             self.env.reset()
+            
         else:
             predict = self.current_chromosome.predict(input_data)
             press_buttons = np.array([predict[5], 0, 0, 0, predict[0], predict[1], predict[2], predict[3], predict[4]])

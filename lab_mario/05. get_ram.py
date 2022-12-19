@@ -1,7 +1,7 @@
 # 05. get_ram.py
 import retro
 
-env = retro.make(game='SuperMarioBros-Nes', state='Level1-1')
+env = retro.make(game='SuperMarioBros-Nes', state='Level1-0')
 env.reset()
 
 ram = env.get_ram()

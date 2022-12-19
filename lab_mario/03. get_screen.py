@@ -3,7 +3,7 @@
 import retro
 
 # 게임 환경 생성
-env = retro.make(game='SuperMarioBros-Nes', state='Level1-1')
+env = retro.make(game='SuperMarioBros-Nes', state='Level1-0')
 # 새 게임 시작
 env.reset()
 
