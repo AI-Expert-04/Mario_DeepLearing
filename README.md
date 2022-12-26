@@ -31,7 +31,7 @@
     </code></pre>
 ##### 자세한 코드는 Genentic_Algorithm.py
 # 마리오 게임
-![tabel](image/game_.png)
+![tabel](image/Mario_DeepLearning_Video.mov)
 # Pyqt5로 그린 인공신경망 
 ![tabel](image/label_.png)
 # 인공신경망 예시
