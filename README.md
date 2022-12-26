@@ -42,7 +42,7 @@
 ![tabel](image/label2.png)
 
 # TSP
-! [tabel](image/TSP_Image.png)
+![tabel](image/TSP_Image.png)
 
 
 
