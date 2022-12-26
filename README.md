@@ -42,8 +42,7 @@
 ![tabel](image/label3.png)
 # Pyqt5로 그린 게임 타일 정보
 ![tabel](image/label2.png)
-
-# TSP
+# TSP알고리즘
 ![tabel](image/TSP_Image.png)
 
 
