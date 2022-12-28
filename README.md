@@ -2,6 +2,18 @@
 
 # 마리오 학습 정리
 ![tabel](image/image77.png) 
+### 인공신경망
+
+### 선택
+
+### 교배
+
+### 변이
+
+### 결과
+세대 : 7703세대
+시간 : 7일
+
 ### 핵심코드
 ##### Genentic_Algorithm.py
 <pre><code>
@@ -27,8 +39,7 @@
         # -1 ~ 1 사이의 값을 가진 6개의 output 중 0.5보다 크면 1로 바꾸고 아니면 0으로 출력
         result = (output > 0.5).astype(np.int)
         return result
-    </code></pre>
-##### 자세한 코드는 Genentic_Algorithm.py
+        자세한 코드는 Genentic_Algorithm.py</code></pre>       
 # 마리오 게임
 ![tabel](image/Mario_DeepLearning_Image.png)
 # 마리오 게임 학습 완료 영상
