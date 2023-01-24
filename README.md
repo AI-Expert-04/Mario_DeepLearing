@@ -16,6 +16,7 @@
 시간 : 7일
 
 느낀점 : 엘리트 보존을 사용하여 퇴화를 막았지만 계단식 성장을 하여 언젠간 성공하지만 언젠가가 오지 않을 까 두렵다.
+YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 
 ### 핵심코드
 ##### Genentic_Algorithm.py
