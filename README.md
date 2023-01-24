@@ -19,7 +19,7 @@
 
 ### 핵심코드
 ##### Genentic_Algorithm.py
-<pre><code> relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
+<pre><code>   relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
     sigmoid = lambda X: 1.0 / (1.0 + np.exp(-X)) # Output_layer
     
     class Chromosome:  # 염색체
