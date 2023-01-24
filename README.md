@@ -16,7 +16,6 @@
 시간 : 7일
 
 느낀점 : 엘리트 보존을 사용하여 퇴화를 막았지만 계단식 성장을 하여 언젠간 성공하지만 언젠가가 오지 않을 까 두렵다.
-YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 
 ### 핵심코드
 ##### Genentic_Algorithm.py
@@ -47,7 +46,7 @@ YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 # 마리오 게임
 ![tabel](image/Mario_DeepLearning_Image.png)
 # 마리오 게임 학습 완료 영상
-![viodeo](image/Mario_DeepLearning_Video.mov)
+YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 # Pyqt5로 그린 인공신경망 
 ![tabel](image/label_.png)
 # 인공신경망 예시
