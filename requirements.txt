@@ -1,0 +1,5 @@
+numpy==1.19.5
+PyQt5==5.15.4
+gym-retro==0.8.0
+gym==0.19.0
+tensorflow
