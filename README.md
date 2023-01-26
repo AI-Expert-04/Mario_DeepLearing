@@ -11,13 +11,15 @@
 ### 변이
 
 ### 결과
-세대 : 7703세대
+세대 : 7703세대,
+
 시간 : 7일
+
+느낀점 : 엘리트 보존을 사용하여 퇴화를 막았지만 계단식 성장을 하여 언젠간 성공하지만 언젠가가 오지 않을 까 두렵다.
 
 ### 핵심코드
 ##### Genentic_Algorithm.py
-<pre><code>
-    relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
+<pre><code>    relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
     sigmoid = lambda X: 1.0 / (1.0 + np.exp(-X)) # Output_layer
     
     class Chromosome:  # 염색체
@@ -43,7 +45,7 @@
 # 마리오 게임
 ![tabel](image/Mario_DeepLearning_Image.png)
 # 마리오 게임 학습 완료 영상
-![viodeo](image/Mario_DeepLearning_Video.mov)
+YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 # Pyqt5로 그린 인공신경망 
 ![tabel](image/label_.png)
 # 인공신경망 예시
