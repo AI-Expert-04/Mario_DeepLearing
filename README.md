@@ -1,8 +1,8 @@
 # Mario_DeepLearing (유전알고리즘과 인공신경망을 활용한 게임 학습)
 
 ## 환경 설정
->>> Window python=3.6
->>> Mac python=3.7
+'>>> Window python=3.6'
+'>>> Mac python=3.7'
 
 # 마리오 학습 정리
 ![tabel](image/image77.png) 
