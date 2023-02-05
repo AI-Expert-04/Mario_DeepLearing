@@ -4,7 +4,7 @@
 ```bash
 >>> Window python=3.6
 >>> Mac python=3.7
->>> pip install 
+>>> pip install requirements.txt
 ```
 
 # 마리오 학습 정리
