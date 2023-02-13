@@ -1,6 +1,4 @@
 # Mario_DeepLearing (유전알고리즘과 인공신경망을 활용한 게임 학습)
-
-# 마리오 게임
 ![tabel](image/Mario_DeepLearning_Image.png)
 
 ## 환경 설정
