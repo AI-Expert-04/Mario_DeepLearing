@@ -1,5 +1,8 @@
 # Mario_DeepLearing (유전알고리즘과 인공신경망을 활용한 게임 학습)
 
+# 마리오 게임
+![tabel](image/Mario_DeepLearning_Image.png)
+
 ## 환경 설정
 ```bash
 >>> Window python=3.6
@@ -26,7 +29,8 @@
 세대 : 7703세대,
 
 시간 : 7일
-
+# 마리오 게임 학습 완료 영상
+YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 느낀점 : 엘리트 보존을 사용하여 퇴화를 막았지만 계단식 성장을 하여 언젠간 성공하지만 언젠가가 오지 않을 까 두렵다.
 
 ### 핵심코드
@@ -53,21 +57,13 @@
         # -1 ~ 1 사이의 값을 가진 6개의 output 중 0.5보다 크면 1로 바꾸고 아니면 0으로 출력
         result = (output > 0.5).astype(np.int)
         return result
-        자세한 코드는 Genentic_Algorithm.py</code></pre>       
-# 마리오 게임
-![tabel](image/Mario_DeepLearning_Image.png)
-# 마리오 게임 학습 완료 영상
-YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
-# Pyqt5로 그린 인공신경망 
-![tabel](image/label_.png)
-# 인공신경망 예시
-![tabel](image/label5.png) 
-# 활성화 함수 ReLU, Sigmoid
-![tabel](image/label3.png)
-# Pyqt5로 그린 게임 타일 정보
-![tabel](image/label2.png)
-# TSP알고리즘
-![tabel](image/TSP_Image.png)
+        자세한 코드는 Genentic_Algorithm.py</code></pre>      
+
+예, 저는 유전자 알고리즘에 대해 잘 알고 있습니다. 유전 알고리즘은 자연 선택 과정에서 영감을 얻은 일종의 최적화 알고리즘입니다. 그것들은 일반적으로 최적화 및 검색 문제를 해결하기 위해 컴퓨터 과학 및 인공 지능에서 사용되며, 여기서 목표는 많은 잠재적 솔루션 세트에서 최상의 솔루션을 찾는 것입니다.
+
+유전자 알고리즘에서 후보 솔루션의 모집단(종종 이진 문자열 또는 벡터로 표시됨)이 초기화됩니다. 각 솔루션은 품질을 측정하는 피트니스 함수를 기반으로 평가됩니다. 더 나은 피트니스 값을 가진 솔루션은 다음 세대를 위한 자손을 생산하기 위해 선택될 가능성이 더 높습니다. 자손 솔루션은 돌연변이 및 교차와 같은 유전 연산자를 적용하여 생성됩니다. 이 프로세스는 만족스러운 솔루션을 찾거나 중지 기준이 충족될 때까지 여러 세대 동안 계속됩니다.
+
+유전 알고리즘은 분석 솔루션을 얻기 어려운 복잡한 실제 문제에 자주 사용되며 공학, 금융 및 생물 정보학을 포함한 많은 분야에 적용되었습니다.
 
 
 
