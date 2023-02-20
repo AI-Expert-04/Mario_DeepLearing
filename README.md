@@ -1,6 +1,12 @@
 # Mario_DeepLearing (유전알고리즘과 인공신경망을 활용한 게임 학습)
 ![tabel](image/Mario_DeepLearning_Image.png)
 
+### 결과
+- 세대 : 7703세대,
+- 시간 : 7일
+- 느낀점 : 엘리트 보존을 사용하여 퇴화를 막았지만 계단식 성장을 하여 언젠간 성공하지만 언젠가가 오지 않을 까 두렵다.
+- 마리오 게임 학습 완료 영상 : YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
+
 ## 환경 설정
 ```bash
 >>> Window python=3.6
@@ -28,12 +34,6 @@
 ### 변이
 - 정적 돌연 변이
 - 가우시안 돌연 변이
-
-### 결과
-- 세대 : 7703세대,
-- 시간 : 7일
-- 느낀점 : 엘리트 보존을 사용하여 퇴화를 막았지만 계단식 성장을 하여 언젠간 성공하지만 언젠가가 오지 않을 까 두렵다.
-- 마리오 게임 학습 완료 영상 : YouTube [Link](https://www.youtube.com/watch?v=icxwqmojT18)
 
 ### 핵심코드
 ##### Genentic_Algorithm.py
