@@ -35,6 +35,24 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
     sort_chromosomes = sorted(self.chromosomes, key=lambda x: x.fitness(), reverse=True)
     return sort_chromosomes[:2] # 가장큰 2개의 숫자 출력</code></pre>
 - 룰렛 휠 생성으로 8개 생성
+<pre><code>     def roulette_wheel_selection(self): # 룰렛 휠 선택? 적합도 ->
+    result = [] # 결과 배열
+    fitness_sum = sum(c.fitness() for c in self.chromosomes) #
+    # 10개의 염색체 중 하나 선택
+    # 적합도를 뽑아서 리스트에 넣고 그것을 더함
+
+    for _ in range(2): # 2번 돌려 선택
+        d
+        pick = random.uniform(0, fitness_sum) # 0 ~ 10개의 염색체의 적합도의 합(랜덤 선택)
+        # 0 ~ sum -0
+        # uniform = 균등확률분포 값을 생성해주는 함수
+        current = 0 # 현재
+        for chromosome in self.chromosomes:
+            current += chromosome.fitness()
+            if current > pick:
+                result.append(chromosome)
+                break
+        return result
 
 #### 교배
 - SBX(일점 교차)를 통해 교배
