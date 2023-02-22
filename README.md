@@ -1,6 +1,5 @@
 # Mario_DeepLearing (유전알고리즘과 인공신경망을 활용한 게임 학습)
 ![tabel](image/Mario_DeepLearning_Image.png)
-
 ### 결과
 - 세대 : 7703세대,
 - 시간 : 7일
