@@ -78,6 +78,11 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
     return child1, child2</code></pre>
 #### 변이
 - 정적 돌연 변이
+<pre><code>def static_mutation(self, data): # 정적 돌연 변이
+    mutation_array = np.random.random(data.shape) < 0.05
+    # 가우시안 돌연 변이
+    gaussian_mutation = np.random.normal(size=data.shape) # 정규 분포
+    data[mutation_array] += gaussian_mutation[mutation_array]</code></pre>
 - 가우시안 돌연 변이
 
 ### 핵심코드
