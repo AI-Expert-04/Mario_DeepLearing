@@ -35,7 +35,7 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
     sort_chromosomes = sorted(self.chromosomes, key=lambda x: x.fitness(), reverse=True)
     return sort_chromosomes[:2] # 가장큰 2개의 숫자 출력</code></pre>
 - 룰렛 휠 생성으로 8개 생성
-<pre><code>     def roulette_wheel_selection(self): # 룰렛 휠 선택? 적합도 ->
+<pre><code>def roulette_wheel_selection(self): # 룰렛 휠 선택? 적합도 ->
     result = [] # 결과 배열
     fitness_sum = sum(c.fitness() for c in self.chromosomes) #
     # 10개의 염색체 중 하나 선택
@@ -52,7 +52,7 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
             if current > pick:
                 result.append(chromosome)
                 break
-        return result
+        return result</code></pre>
 
 #### 교배
 - SBX(일점 교차)를 통해 교배
