@@ -20,16 +20,6 @@
 # 보고서
 ![tabel]
 ## Genentic_Algorithm.py
-#### 인공신경망
-- Input_layer
-<pre><code>self.w1 = np.random.uniform(low=-1, high=1, size=(80, 9))</code></pre>
-- Hidden_layer
-<pre><code>self.b1 = np.random.uniform(low=-1, high=1, size=(9,))<pre><code>
-
-self.w2 = np.random.uniform(low=-1, high=1, size=(9, 6))
-self.b2 = np.random.uniform(low=-1, high=1, size=(6,))
-</code></pre>
-
 #### 활성화 함수
 - ReLU
 <pre><code>relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
