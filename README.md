@@ -56,6 +56,16 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
 
 #### 교배
 - SBX(일점 교차)를 통해 교배
+<pre><code>def SBX(self, p1, p2): # Simulated binary crossover // 일점 교차
+    
+    # 숫자를 비율로 쪼갬
+    rand = np.random.random(p1.shape)
+    gamma = np.empty(p1.shape)
+    gamma[rand <= 0.5] = (2 * rand[rand <= 0.5]) ** (1.0 / (100 + 1))
+    gamma[rand > 0.5] = (1.0 / (2.0 * (1.0 - rand[rand > 0.5]))) ** (1.0 / (100 + 1))
+    c1 = 0.5 * ((1 + gamma) * p1 + (1 - gamma) * p2)
+    c2 = 0.5 * ((1 - gamma) * p1 + (1 + gamma) * p2)
+    return c1, c2</code></pre>
 
 #### 변이
 - 정적 돌연 변이
