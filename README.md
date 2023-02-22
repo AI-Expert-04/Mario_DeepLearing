@@ -20,19 +20,19 @@
 # 보고서
 ![tabel]
 ## Genentic_Algorithm.py
-### 인공신경망
+#### 인공신경망
 - ReLU
 <pre><code>relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer</code></pre>
 - Sigmoid
 <pre><code>sigmoid = lambda X: 1.0 / (1.0 + np.exp(-X)) # Output_layer</code></pre>
-### 선택
+#### 선택
 - 엘리트 보존 선택 2개
 - 룰렛 휠 생성으로 8개 생성
 
-### 교배
+#### 교배
 - SBX(일점 교차)를 통해 교배
 
-### 변이
+#### 변이
 - 정적 돌연 변이
 - 가우시안 돌연 변이
 
