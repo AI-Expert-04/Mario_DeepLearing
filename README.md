@@ -57,7 +57,6 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
 #### 교배
 - SBX(일점 교차)를 통해 교배
 <pre><code>def SBX(self, p1, p2): # Simulated binary crossover // 일점 교차
-    
     # 숫자를 비율로 쪼갬
     rand = np.random.random(p1.shape)
     gamma = np.empty(p1.shape)
@@ -66,7 +65,17 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
     c1 = 0.5 * ((1 + gamma) * p1 + (1 - gamma) * p2)
     c2 = 0.5 * ((1 - gamma) * p1 + (1 + gamma) * p2)
     return c1, c2</code></pre>
-
+- crossover 교배 과정
+<pre><code>def crossover(self, chromosome1, chromosome2):  # 교배 과정
+    child1 = Chromosome()
+    child2 = Chromosome()
+    # 선택된 2개의 높은 염색체 2개의 자식 만듭
+    child1.w1, child2.w1 = self.SBX(chromosome1.w1, chromosome2.w1)
+    child1.b1, child2.b1 = self.SBX(chromosome1.b1, chromosome2.b1)
+    child1.w2, child2.w2 = self.SBX(chromosome1.w2, chromosome2.w2)
+    child1.b2, child2.b2 = self.SBX(chromosome1.b2, chromosome2.b2)
+    # 어떤 문제를 하냐에 따라 결과가 달라짐 -> 실험// 문제마다 선택 교배 변이 내가 고르는 것
+    return child1, child2</code></pre>
 #### 변이
 - 정적 돌연 변이
 - 가우시안 돌연 변이
