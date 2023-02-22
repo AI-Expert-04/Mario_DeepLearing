@@ -21,10 +21,21 @@
 ![tabel]
 ## Genentic_Algorithm.py
 #### 인공신경망
+<pre><code>self.w1 = np.random.uniform(low=-1, high=1, size=(80, 9))
+        self.b1 = np.random.uniform(low=-1, high=1, size=(9,))
+
+        self.w2 = np.random.uniform(low=-1, high=1, size=(9, 6))
+        self.b2 = np.random.uniform(low=-1, high=1, size=(6,))
+</code></pre>
+
+#### 활성화 함수
 - ReLU
-<pre><code>relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer</code></pre>
+<pre><code>relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
+self.l1 = relu(np.matmul(data, self.w1) + self.b1)</code></pre>
 - Sigmoid
-<pre><code>sigmoid = lambda X: 1.0 / (1.0 + np.exp(-X)) # Output_layer</code></pre>
+<pre><code>sigmoid = lambda X: 1.0 / (1.0 + np.exp(-X)) # Output_layer
+output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
+
 #### 선택
 - 엘리트 보존 선택 2개
 - 룰렛 휠 생성으로 8개 생성
