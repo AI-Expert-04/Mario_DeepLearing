@@ -31,9 +31,9 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
 #### 선택
 - 엘리트 보존 선택 2개
 <pre><code>def elitist_preserve_selection(self): # 엘리트 보존 선택
-# 염색체 정렬(내림 차순) -> 정렬(염색체_배열, 적합도 함수 호출, )
-sort_chromosomes = sorted(self.chromosomes, key=lambda x: x.fitness(), reverse=True)
-return sort_chromosomes[:2] # 가장큰 2개의 숫자 출력</code></pre>
+    # 염색체 정렬(내림 차순) -> 정렬(염색체_배열, 적합도 함수 호출, )
+    sort_chromosomes = sorted(self.chromosomes, key=lambda x: x.fitness(), reverse=True)
+    return sort_chromosomes[:2] # 가장큰 2개의 숫자 출력</code></pre>
 - 룰렛 휠 생성으로 8개 생성
 
 #### 교배
