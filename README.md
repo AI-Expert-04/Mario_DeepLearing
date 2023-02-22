@@ -89,33 +89,7 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
     self.static_mutation(chromosome.w1)
     self.static_mutation(chromosome.b1)
     self.static_mutation(chromosome.w2)
-    self.static_mutation(chromosome.b2)</code></pre>
-
-### 핵심코드
-##### Genentic_Algorithm.py
-<pre><code>    relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer
-    sigmoid = lambda X: 1.0 / (1.0 + np.exp(-X)) # Output_layer
-    
-    class Chromosome:  # 염색체
-    def __init__(self):
-        # 4개의 유전자가 모여 하나의 염색체가 됨
-
-        self.w1 = np.random.uniform(low=-1, high=1, size=(80, 9))
-        self.b1 = np.random.uniform(low=-1, high=1, size=(9,))
-
-        self.w2 = np.random.uniform(low=-1, high=1, size=(9, 6))
-        self.b2 = np.random.uniform(low=-1, high=1, size=(6,))
-        
-        def predict(self, data): # 예측
-        # data = Input_layer;
-        self.l1 = relu(np.matmul(data, self.w1) + self.b1) # 행렬곱
-        # sigmoid = Output_layer
-        output = sigmoid(np.matmul(self.l1, self.w2) + self.b2) # 행렬곱
-        # output = [-1 ~ 1, -1 ~ 1, -1 ~ 1, -1 ~ 1, -1 ~ 1, -1 ~ 1]
-        # -1 ~ 1 사이의 값을 가진 6개의 output 중 0.5보다 크면 1로 바꾸고 아니면 0으로 출력
-        result = (output > 0.5).astype(np.int)
-        return result
-        자세한 코드는 Genentic_Algorithm.py</code></pre>      
+    self.static_mutation(chromosome.b2)</code></pre>     
 
 유전 알고리즘은 자연 선택 과정에서 영감을 얻은 일종의 최적화 알고리즘입니다. 그것들은 일반적으로 최적화 및 검색 문제를 해결하기 위해 컴퓨터 과학 및 인공 지능에서 사용되며, 여기서 목표는 많은 잠재적 솔루션 세트에서 최상의 솔루션을 찾는 것입니다.
 
