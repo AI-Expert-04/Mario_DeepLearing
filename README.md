@@ -20,9 +20,10 @@
 # 보고서
 ![tabel]
 ### 인공신경망
+##### Genentic_Algorithm.py
 - ReLU
+<pre><code>    relu = lambda X: np.maximum(0, X) # 단층, Hidden_layer</code></pre>
 - Sigmoid
-ㅇㅇ
 
 ### 선택
 - 엘리트 보존 선택 2개
