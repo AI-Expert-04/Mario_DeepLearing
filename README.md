@@ -24,7 +24,7 @@
 - Input_layer
 <pre><code>self.w1 = np.random.uniform(low=-1, high=1, size=(80, 9))</code></pre>
 - Hidden_layer
-self.b1 = np.random.uniform(low=-1, high=1, size=(9,))
+<pre><code>self.b1 = np.random.uniform(low=-1, high=1, size=(9,))<pre><code>
 
 self.w2 = np.random.uniform(low=-1, high=1, size=(9, 6))
 self.b2 = np.random.uniform(low=-1, high=1, size=(6,))
