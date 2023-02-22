@@ -21,7 +21,9 @@
 ![tabel]
 ## Genentic_Algorithm.py
 #### 인공신경망
-<pre><code>self.w1 = np.random.uniform(low=-1, high=1, size=(80, 9))
+- Input_layer
+<pre><code>self.w1 = np.random.uniform(low=-1, high=1, size=(80, 9))</code></pre>
+- Hidden_layer
 self.b1 = np.random.uniform(low=-1, high=1, size=(9,))
 
 self.w2 = np.random.uniform(low=-1, high=1, size=(9, 6))
