@@ -84,6 +84,12 @@ output = sigmoid(np.matmul(self.l1, self.w2) + self.b2)</code></pre>
     gaussian_mutation = np.random.normal(size=data.shape) # 정규 분포
     data[mutation_array] += gaussian_mutation[mutation_array]</code></pre>
 - 가우시안 돌연 변이
+<pre><code>def mutation(self, chromosome): # 변이
+    # 2번 호출됨
+    self.static_mutation(chromosome.w1)
+    self.static_mutation(chromosome.b1)
+    self.static_mutation(chromosome.w2)
+    self.static_mutation(chromosome.b2)</code></pre>
 
 ### 핵심코드
 ##### Genentic_Algorithm.py
