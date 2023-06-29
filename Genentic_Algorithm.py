@@ -22,11 +22,11 @@ class Chromosome:  # 염색체
         # [a, b] * [b, c] = [a, c]
 
         self.l1 = None
-        self.distance = 0 # 거리
-        self.max_distance = 0 #최대 거리
-        self.frames = 0 # 프레임
-        self.stop_frames = 0 # 정지 프레임
-        self.win = 0 # 승리
+        self.distance = 0  # 거리
+        self.max_distance = 0  #최대 거리
+        self.frames = 0  # 프레임
+        self.stop_frames = 0  # 정지 프레임
+        self.win = 0  # 승리
 
     def predict(self, data):
         # data = Input_layer;
@@ -50,6 +50,7 @@ class Chromosome:  # 염색체
         '''
         return int(max(self.distance ** 1.8 - self.frames ** 1.5 + min(max(self.distance - 50, 0), 1) * 2500 + self.win * 1000000, 1))
         # 반환, 정수(최대(거리^0.8 - 프레임^0.5 + 최저(최고(거리 - 50, 0), 0) * 2500 + 승리 * 1000000, 0))
+
 
 class GeneticAlgorithm:  # 유전_알고리즘
     def __init__(self):
